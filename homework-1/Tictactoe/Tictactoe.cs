@@ -9,7 +9,7 @@ public class Tictactoe : MonoBehaviour {
 		initialGame ();
 	}
 
-	//初始化函数
+	//initial
 	void initialGame () {
 		gameStatus = 0;
 		Winner = 0;
