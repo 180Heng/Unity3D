@@ -4,21 +4,6 @@ using UnityEngine;
 
 public class Tictactoe : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		initialGame ();
-	}
-
-	//initial
-	void initialGame () {
-		gameStatus = 0;
-		Winner = 0;
-		turn = 1;
-		for (int i = 0; i < 3; i++)
-			for (int j = 0; j < 3; j++)
-				chessboard[i,j] = 0;
-	}
-
 	private int[,] chessboard = new int[3, 3]; //the chessboard
 	private int gameStatus = 0; //judge whether the game begins
 	private int turn= 1; 
@@ -29,6 +14,23 @@ public class Tictactoe : MonoBehaviour {
 	float width = Screen.width * 0.5f;
 	int bHeight = 100;
 	int bWidth = 150;
+
+	// Use this for initialization
+	void Start () {
+		Restart();
+	}
+
+	//initial
+	void Restart() {
+		gameStatus = 0;
+		Winner = 0;
+		turn = 1;
+		for (int i = 0; i < 3; i++)
+			for (int j = 0; j < 3; j++)
+				chessboard[i,j] = 0;
+	}
+
+
 
 
 
@@ -42,7 +44,7 @@ public class Tictactoe : MonoBehaviour {
 		if (gameStatus == 0) {
 			int result = 0;
 			if (Winner == 0) {
-				result = check ();
+				result = judge ();
 				if (result != 0) {
 					Winner = result;
 					gameStatus = 1;
@@ -71,7 +73,7 @@ public class Tictactoe : MonoBehaviour {
 				GUI.Label (new Rect (x, y, 100, 50), "Player2 wins!", textStyle);
 			}
 			if (GUI.Button (new Rect (x+30, y+150, 120, 50), "Play again!"))
-				initialGame ();
+				Restart();
 		}
 	}
 
