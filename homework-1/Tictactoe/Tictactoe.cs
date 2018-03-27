@@ -40,6 +40,7 @@ public class Tictactoe : MonoBehaviour {
 		textStyle.normal.textColor = Color.red;
 		textStyle.fontSize = 70;
 		textStyle_OX.fontSize = 30;
+		textStyle_OX.normal.textColor = Color.gray;
 		GUI.Label(new Rect(x-40,y-100,300,100), "Tic Tac Toe", textStyle);
 		if (gameStatus == 0) {
 			int result = 0;
@@ -53,9 +54,9 @@ public class Tictactoe : MonoBehaviour {
 			for (int i = 0; i < 3; i++)
 				for (int j = 0; j < 3; j++) {
 					if (chessboard [i, j] == 1)
-						GUI.Button (new Rect (x + i * 100, y + j * 100, 100, 100), "O");
+						GUI.Button (new Rect (x + i * 100 + 40, y + j * 100 + 40, 100, 100), "O",textStyle_OX);
 					if (chessboard [i, j] == 2)
-						GUI.Button (new Rect (x + i * 100, y + j * 100, 100, 100), "X");
+						GUI.Button (new Rect (x + i * 100 + 40, y + j * 100 + 40, 100, 100), "X",textStyle_OX);
 					if (GUI.Button (new Rect (x + i * 100, y + j * 100, 100, 100), "")) {  
 						if (result == 0) {  
 							chessboard [i, j] = turn;  
@@ -72,7 +73,7 @@ public class Tictactoe : MonoBehaviour {
 			} else if (Winner == 3) {
 				GUI.Label (new Rect (x, y, 100, 50), "Dogfall~", textStyle);
 			}
-			if (GUI.Button (new Rect (x+30, y+150, 120, 50), "Play again!"))
+			if (GUI.Button (new Rect (x+30, y+150, 180, 100), "Play again!"))
 				Restart();
 		}
 	}
