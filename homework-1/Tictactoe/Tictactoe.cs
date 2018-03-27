@@ -76,23 +76,28 @@ public class Tictactoe : MonoBehaviour {
 	}
 
 	//judge whether gameover 
-	int check () {
+	int judge () {
 		for (int i = 0; i < 3; i++) {
-			if (chessboard [0, i] != 0 && chessboard [0, i] == chessboard [1, i] && chessboard [1, i] == chessboard [2, i])
+			if (chessboard [0, i] != 0 && chessboard [0, i] == chessboard [1, i] && chessboard [1, i] == chessboard [2, i]){
 				return chessboard [0, i];
-			if (chessboard [i, 0] != 0 && chessboard [i, 0] == chessboard [i, 1] && chessboard [i, 1] == chessboard [i, 2])
+			}
+			if (chessboard [i, 0] != 0 && chessboard [i, 0] == chessboard [i, 1] && chessboard [i, 1] == chessboard [i, 2]){
 				return chessboard [i, 0];
+			}
 		}
-		if (chessboard [1, 1] != 0 && chessboard [0, 0] == chessboard [1, 1] && chessboard [1, 1] == chessboard [2, 2])
+		if (chessboard [1, 1] != 0 && chessboard [0, 0] == chessboard [1, 1] && chessboard [1, 1] == chessboard [2, 2]){
 			return chessboard [1, 1];
-		if (chessboard [1, 1] != 0 && chessboard [0, 2] == chessboard [1, 1] && chessboard [1, 1] == chessboard [2, 0])
+		}
+		if (chessboard [1, 1] != 0 && chessboard [0, 2] == chessboard [1, 1] && chessboard [1, 1] == chessboard [2, 0]){
 			return chessboard [1, 1];
-		for (int i = 0; i < 3; i++)
+		}
+		for (int i = 0; i < 3; i++){
 			for (int j = 0; j < 3; j++) {
 				if (chessboard[i,j] == 0) {
 					return 0;
 				}
 			}
+		}
 		return 3;
 	}
 }
