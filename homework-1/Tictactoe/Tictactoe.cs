@@ -65,12 +65,12 @@ public class Tictactoe : MonoBehaviour {
 				}
 		} 
 		else {
-			if (Winner == 3) {
-				GUI.Label (new Rect (x, y, 100, 50), "Dogfall~", textStyle);
-			} else if (Winner == 1) {
+			if (Winner == 1) {
 				GUI.Label (new Rect (x, y, 100, 50), "Player1 wins!", textStyle);
 			} else if (Winner == 2) {
 				GUI.Label (new Rect (x, y, 100, 50), "Player2 wins!", textStyle);
+			} else if (Winner == 3) {
+				GUI.Label (new Rect (x, y, 100, 50), "Dogfall~", textStyle);
 			}
 			if (GUI.Button (new Rect (x+30, y+150, 120, 50), "Play again!"))
 				Restart();
