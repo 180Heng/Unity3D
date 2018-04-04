@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Com.Mygame;
 
+
+
 namespace Com.Mygame {
 	
 	public class Director : System.Object {

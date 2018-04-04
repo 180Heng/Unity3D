@@ -22,4 +22,15 @@ public class ClickGUI : MonoBehaviour {
 			action.characterIsClicked (characterController);
 		}
 	}
+	public Texture2D img; 
+
+	void OnGUI(){
+		string a = "";
+		GUIStyle b = new GUIStyle(); 
+		b.normal.background = img;
+		GUI.Label(new Rect(0, 0, 1370, 780), a, b);
+	}
+
 }
+
+
