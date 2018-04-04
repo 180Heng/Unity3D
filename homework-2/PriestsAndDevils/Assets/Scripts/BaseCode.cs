@@ -141,7 +141,7 @@ namespace Com.Mygame {
 
 		public void reset() {
 			moveableScript.reset ();
-			coastController = (Director.getInstance ().currentSceneController as FirstController).fromCoast;
+			coastController = (Director.getInstance ().currentSceneController as GenGameObjects).fromCoast;
 			getOnCoast (coastController);
 			setPosition (coastController.getEmptyPosition ());
 			coastController.getOnCoast (this);
