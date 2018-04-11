@@ -14,6 +14,11 @@ public class FirstController : MonoBehaviour, SceneController, UserAction {
 	public CoastController toCoast;
 	public BoatController boat;
 	private MyCharacterController[] characters;
+	private FirstSceneActionManager actionManager;
+
+	void Start() {
+		actionManager = GetComponent<FirstSceneActionManager> ();
+	}
 
 	void Awake() {
 		Director director = Director.getInstance ();
@@ -60,7 +65,8 @@ public class FirstController : MonoBehaviour, SceneController, UserAction {
 	public void moveBoat() {
 		if (boat.isEmpty ())
 			return;
-		boat.Move ();
+		actionManager.toggleBoat (boat);
+		boat.changeTo_or_from();
 		userGUI.status = check_game_over ();
 	}
 
@@ -74,7 +80,7 @@ public class FirstController : MonoBehaviour, SceneController, UserAction {
 			}
 
 			boat.GetOffBoat (characterCtrl.getName());
-			characterCtrl.moveToPosition (whichCoast.getEmptyPosition ());
+			actionManager.moveCharacter (characterCtrl, whichCoast.getEmptyPosition ());
 			characterCtrl.getOnCoast (whichCoast);
 			whichCoast.getOnCoast (characterCtrl);
 
@@ -89,7 +95,7 @@ public class FirstController : MonoBehaviour, SceneController, UserAction {
 				return;
 
 			whichCoast.getOffCoast(characterCtrl.getName());
-			characterCtrl.moveToPosition (boat.getEmptyPosition());
+			actionManager.moveCharacter (characterCtrl, boat.getEmptyPosition ());
 			characterCtrl.getOnBoat (boat);
 			boat.GetOnBoat (characterCtrl);
 		}

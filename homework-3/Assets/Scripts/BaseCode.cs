@@ -77,12 +77,23 @@ namespace Com.Mygame {
 		readonly GameObject character;
 		readonly Moveable moveableScript;
 		readonly ClickGUI clickGUI;
+		public readonly float speed=10; 
 		readonly int characterType;	// 0->priest, 1->devil
 
 		// change frequently
 		bool _isOnBoat;
 		CoastController coastController;
 
+		public Vector3 getPos ()
+		{
+			return character.transform.position;
+		}
+
+
+		public GameObject getInstance()
+		{
+			return character;
+		}
 
 		public MyCharacterController(string which_character) {
 			
@@ -234,6 +245,7 @@ namespace Com.Mygame {
 	/*-----------------------------------BoatController------------------------------------------*/
 	public class BoatController {
 		readonly GameObject boat;
+		public readonly float speed = 10;
 		readonly Moveable moveableScript;
 		readonly Vector3 fromPosition = new Vector3 (5, 1, 0);
 		readonly Vector3 toPosition = new Vector3 (-5, 1, 0);
@@ -243,6 +255,12 @@ namespace Com.Mygame {
 		// change frequently
 		int to_or_from; // to->-1; from->1
 		MyCharacterController[] passenger = new MyCharacterController[2];
+
+
+		public void changeTo_or_from()
+		{
+			to_or_from *= -1;
+		}
 
 		public BoatController() {
 			to_or_from = 1;
@@ -255,6 +273,20 @@ namespace Com.Mygame {
 
 			moveableScript = boat.AddComponent (typeof(Moveable)) as Moveable;
 			boat.AddComponent (typeof(ClickGUI));
+		}
+
+		public Vector3 getTarget ()
+		{
+			if (to_or_from == 1)
+				return toPosition;
+			else
+				return fromPosition;
+		}
+
+
+		public GameObject getBoat ()
+		{
+			return boat;
 		}
 
 
