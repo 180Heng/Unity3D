@@ -41,7 +41,7 @@
 
     * 重点-动作管理器：
 
-            public class SSActionManager : MonoBehaviour, ActionCallback {
+            public class ActionManager : MonoBehaviour, ActionCallback {
                 private Dictionary<int, SSAction> actions = new Dictionary<int, SSAction>();
                 private List<SSAction> waitingToAdd = new List<SSAction>();
                 private List<int> watingToDelete = new List<int>();
@@ -118,13 +118,13 @@
 
      * 组合动作的实现：
 
-            public class CCSequenceAction : SSAction, ActionCallback {
+            public class SequenceAction : SSAction, ActionCallback {
                 public List<SSAction> sequence;
                 public int repeat = 1; // 1->only do it for once, -1->repeat forever
                 public int currentActionIndex = 0;
 
-                public static CCSequenceAction getAction(int repeat, int currentActionIndex, List<SSAction> sequence) {
-                    CCSequenceAction action = ScriptableObject.CreateInstance<CCSequenceAction>();
+                public static SequenceAction getAction(int repeat, int currentActionIndex, List<SSAction> sequence) {
+                    SequenceAction action = ScriptableObject.CreateInstance<SequenceAction>();
                     action.sequence = sequence;
                     action.repeat = repeat;
                     action.currentActionIndex = currentActionIndex;
