@@ -4,7 +4,7 @@ using Com.Mygame;
 using System.Collections.Generic;
 
 
-public class FirstSceneActionManager : SSActionManager {
+public class FirstSceneActionManager : ActionManager {
 	public void toggleBoat(BoatController boat) {
 		MoveAction action = MoveAction.getAction (boat.getTarget (), boat.speed);
 		this.addAction (boat.getBoat (), action, this);
@@ -20,7 +20,7 @@ public class FirstSceneActionManager : SSActionManager {
 		}
 		SSAction action1 = MoveAction.getAction(tmpPos, character.speed);
 		SSAction action2 = MoveAction.getAction(target, character.speed);
-		SSAction sequenceAction = CCSequenceAction.getAction(1, 0, new List<SSAction>{action1, action2});
+		SSAction sequenceAction = SequenceAction.getAction(1, 0, new List<SSAction>{action1, action2});
 		this.addAction(character.getInstance(), sequenceAction, this);
 	}
 }
