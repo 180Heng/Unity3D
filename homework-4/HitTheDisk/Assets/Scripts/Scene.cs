@@ -49,7 +49,7 @@ public class Scene : MonoBehaviour {
         Round = 1;
         Reset(Round);
     }
-
+		
     private void Update() {
         if (inUseUFOs != null) {
             for (int i = 0; i < inUseUFOs.Count; i++) {

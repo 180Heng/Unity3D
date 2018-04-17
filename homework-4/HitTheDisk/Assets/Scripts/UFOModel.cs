@@ -10,7 +10,7 @@ public class UFOModel {
 
     public void Reset(int round) {
         UFOSpeed = 0.1f;
-        if (round % 3 == 1) {
+		if (round  == 2|| round  == 5) {
 			UFOColor = Color.yellow;
 			startPos = new Vector3(-2f, 3f, -10f);
             startDirection = new Vector3(3f, 8f, 5f);

@@ -6,7 +6,7 @@ public class GameModel : IScore {
     private static GameModel gameModel;
 
     private GameModel() {
-        Round = 0;
+        Round = 1;
     }
 
     public static GameModel GetGameModel() {
@@ -14,9 +14,9 @@ public class GameModel : IScore {
     }
 
     public void AddScore() {
-		if(Round%3==1)
-        	Score += 10;
-		else Score += 20;
+		if(Round  == 2|| Round  == 5)
+        	Score += 20;
+		else Score += 10;
         if (CheckUpdate()) {
             Round++;
             FirstSceneControllerBase.GetFirstSceneControllerBase().Update();
@@ -33,9 +33,6 @@ public class GameModel : IScore {
 
     public void SubScore() {
         Score -= 10;
-        if (Score < 0) {
-            FirstSceneControllerBase.GetFirstSceneControllerBase().SetGameStatus(GameStatus.Lose);
-        }
     }
 
     public bool CheckUpdate() {

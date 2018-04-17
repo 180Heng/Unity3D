@@ -47,3 +47,5 @@ public class UFOFactory : MonoBehaviour {
         _ufoFactory.UFOPrefab = ufoPrefab;
     }
 }
+
+
