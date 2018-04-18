@@ -35,6 +35,10 @@ public class FirstSceneControllerBase : IUserInterface, IQueryStatus, ISetStatus
     public void SetSceneStatus(SceneStatus _sceneStatus) {
         sceneStatus = _sceneStatus;
     }
+	public void Count()
+	{
+		GameModel.GetGameModel ().Count ();
+	}
 
     public void AddScore() {
         GameModel.GetGameModel().AddScore();

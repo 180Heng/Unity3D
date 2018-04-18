@@ -4,19 +4,21 @@ using UnityEngine;
 public class Scene : MonoBehaviour {
     public int Round { get; set; }
     public int UFONum { get; private set; }
+	public int count;
     private UFOModel ufoModel = new UFOModel();
     
     List<GameObject> inUseUFOs;
 
-    public void Reset(int round) {
+	public void Reset(int round,int count) {
         Round = round;
         UFONum = round;
-        ufoModel.Reset(round);
+        ufoModel.Reset(round,count);
     }
 
     public void SendUFO(List<GameObject> usingUFOs) {
+		count++;
         inUseUFOs = usingUFOs;
-        Reset(Round);
+		Reset(Round,count);
         for (int i = 0; i < usingUFOs.Count; i++) {
             usingUFOs[i].GetComponent<Renderer>().material.color = ufoModel.UFOColor;
 
@@ -29,7 +31,7 @@ public class Scene : MonoBehaviour {
             rigibody.useGravity = true;
             rigibody.AddForce(ufoModel.startDirection * Random.Range(ufoModel.UFOSpeed * 5, ufoModel.UFOSpeed * 8) / 5, 
                 ForceMode.Impulse);
-
+			FirstSceneControllerBase.GetFirstSceneControllerBase ().Count ();
             FirstSceneControllerBase.GetFirstSceneControllerBase().SetSceneStatus(SceneStatus.Shooting);
         }
     }
@@ -42,12 +44,13 @@ public class Scene : MonoBehaviour {
 
     public void SceneUpdate() {
         Round++;
-        Reset(Round);
+        Reset(Round,count);
     }
 
     private void Start() {
         Round = 1;
-        Reset(Round);
+		count = 0;
+        Reset(Round,count);
     }
 		
     private void Update() {

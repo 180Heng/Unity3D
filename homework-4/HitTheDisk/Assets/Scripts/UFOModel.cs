@@ -8,9 +8,9 @@ public class UFOModel {
     public Vector3 startDirection;
     public float UFOSpeed;
 
-    public void Reset(int round) {
+	public void Reset(int round,int count) {
         UFOSpeed = 0.1f;
-		if (round  == 2|| round  == 5) {
+		if (count  == 2|| count  == 5) {
 			UFOColor = Color.yellow;
 			startPos = new Vector3(-2f, 3f, -10f);
             startDirection = new Vector3(3f, 8f, 5f);
