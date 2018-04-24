@@ -2,7 +2,7 @@
 -----
 ## 视频演示网站：
 
-![HitTheDisk Adapter模式](https://pan.baidu.com/s/1ZzRuG50DAE1Z8uwe3J77Rw)
+- HitTheDisk Adapter模式：https://pan.baidu.com/s/1ZzRuG50DAE1Z8uwe3J77Rw
 
 -----
 - 这次任务我们是在学习了物理运动之后，给我们的HitTheDisk游戏加上adapter模式，使它同时支持物理运动与运动学（变换）运动。其实也只是通过接口来实现两种运动模式的切换，也就是使用刚体和不使用刚体两种模式来相互切换。
