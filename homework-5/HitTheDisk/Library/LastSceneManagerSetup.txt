@@ -1,0 +1,4 @@
+sceneSetups:
+- path: D:/Unity/UFO/UFO/Assets/Disk.unity
+  isLoaded: 1
+  isActive: 1
