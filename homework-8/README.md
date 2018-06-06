@@ -2,7 +2,7 @@
 -----
 视频：https://pan.baidu.com/s/1_WCrB2jj4V9rXBwbNej_7g
 
-样例来源：http://www.tasharen.com/ngui/example9.html（注意要用IE打开，而且加载非常慢）
+样例来源：http://www.tasharen.com/ngui/example9.html   （注意要用IE打开，而且加载非常慢）
 
 --------
 
