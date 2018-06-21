@@ -7,7 +7,7 @@
 
 视频地址：
 
-参考博客：http://www.chenxd59.cn/?p=213
+参考师兄博客：http://www.chenxd59.cn/?p=213
 
 ------
 ## 要求：
@@ -31,4 +31,11 @@
     http://liweizhaolili.blog.163.com/blog/static/16230744201271161310135/
     https://blog.csdn.net/zzj051319/article/details/71687833
 
-### 代码实现
+### 地图的烘焙
+- 要使用NavMesh我们首先需要通过烘培生成一个可以被NavAgent识别的地形。
+    
+    创建地形如下：
+
+    ![](http://m.qpic.cn/psb?/V13ncXZC2IVZm7/KiumXr8uKfej2b6oHxtsNIanGHkD35Fl15ZgSRDAgiI!/b/dDABAAAAAAAA&bo=rwMJAgAAAAARB5c!&rf=viewer_4)
+
+    接着进行烘焙：
