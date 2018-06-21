@@ -28,4 +28,6 @@
 - AI的实现主要在“思考”这一部分，这也是坦克AI的核心所在
 - 要实现地方坦克的自动寻路，我们需要使用到unity中的NavMesh。
 - NavMesh入门教程：http://liweizhaolili.blog.163.com/blog/static/16230744201271161310135/
-https://blog.csdn.net/zzj051319/article/details/71687833
+    https://blog.csdn.net/zzj051319/article/details/71687833
+
+### 代码实现
