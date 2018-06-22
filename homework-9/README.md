@@ -5,7 +5,7 @@
 
 ----
 
-视频地址：
+视频地址：https://pan.baidu.com/s/1JjvXQL5aNfZR0mum6v9UPA
 
 参考师兄博客：http://www.chenxd59.cn/?p=213
 
@@ -20,6 +20,7 @@
 -----
 
 ## 游戏实现：
+- 实现效果：AI会自动寻路，玩家可以移动来躲避AI的追捕，或者发射子弹来击走敌人。
 
 ### Tanks! Tutorial
 - Assets store 里免费的坦克大战游戏制作教程，里面有丰富的游戏资源供我们选择使用
@@ -36,6 +37,10 @@
     
     创建地形如下：
 
-    ![](http://m.qpic.cn/psb?/V13ncXZC2IVZm7/KiumXr8uKfej2b6oHxtsNIanGHkD35Fl15ZgSRDAgiI!/b/dDABAAAAAAAA&bo=rwMJAgAAAAARB5c!&rf=viewer_4)
+    ![](http://a2.qpic.cn/psb?/V13ncXZC2IVZm7/1aMyfJ3Gkj5ad3ATulcMudrSbBfbD7x6d8PLuwW6GEk!/b/dDEBAAAAAAAA&ek=1&kp=1&pt=0&bo=qwMFAgAAAAARF48!&tl=3&vuin=964683913&tm=1529564400&sce=60-2-2&rf=viewer_4)
 
     接着进行烘焙：
+
+    ![](http://a4.qpic.cn/psb?/V13ncXZC2IVZm7/rOHrWYdtHo29wJWoM64xzJvmQVn81yCDhPFU03eqnUM!/b/dDMBAAAAAAAA&ek=1&kp=1&pt=0&bo=KAIuAgAAAAARFyY!&tl=3&vuin=964683913&tm=1529564400&sce=60-2-2&rf=viewer_4)
+    
+    ![](http://a4.qpic.cn/psb?/V13ncXZC2IVZm7/kzD9F*L0FRTRipxk5k9sOoVrvXSVK4bT9dFVu9lZrU0!/b/dGcBAAAAAAAA&ek=1&kp=1&pt=0&bo=rAMQAgAAAAARF50!&tl=3&vuin=964683913&tm=1529564400&sce=60-2-2&rf=viewer_4)
