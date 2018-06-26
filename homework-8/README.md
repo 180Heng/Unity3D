@@ -8,8 +8,8 @@
 
 公告牌作业效果图：
 
-![](http://a4.qpic.cn/psb?/V13ncXZC2IVZm7/RcfIzLlgWhVVhHQ1DD5AHfcpgvbC93thQXMdI73Qfq8!/b/dDMBAAAAAAAA&ek=1&kp=1&pt=0&bo=egT8AQAAAAARF6M!&tl=3&vuin=964683913&tm=1528300800&sce=60-2-2&rf=viewer_4)
+![](https://img3.doubanio.com/view/photo/l/public/p2526275421.webp)
 
 项目结构：
 
-![](http://a4.qpic.cn/psb?/V13ncXZC2IVZm7/76PNv8D2nTZy01i7zAC.lbJMqXRf8ctLNbTm6TIG.Ss!/b/dPMAAAAAAAAA&ek=1&kp=1&pt=0&bo=eAHtAQAAAAARF7U!&tl=3&vuin=964683913&tm=1528300800&sce=60-2-2&rf=viewer_4)
+![](https://img3.doubanio.com/view/photo/l/public/p2526275423.webp)
