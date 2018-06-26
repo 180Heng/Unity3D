@@ -37,10 +37,10 @@
     
     创建地形如下：
 
-    ![](https://www.douban.com/photos/photo/2526271747/#image)
+    ![1](https://www.douban.com/photos/photo/2526271747/#image)
 
     接着进行烘焙：
 
-    ![](https://www.douban.com/photos/photo/2526271748/#image)
+    ![2](https://www.douban.com/photos/photo/2526271748/#image)
     
-    ![](https://www.douban.com/photos/photo/2526271745/#image)
+    ![3](https://www.douban.com/photos/photo/2526271745/#image)
