@@ -13,7 +13,7 @@ public class HeroStatus : MonoBehaviour {
 	}
 	
 	void Update () {
-        Camera.main.transform.position = new Vector3(player.transform.position.x/3, 13.0f, player.transform.position.z/3);
+        Camera.main.transform.position = new Vector3(player.transform.position.x/4, 13.0f, player.transform.position.z/3);
     }
 	private void OnGUI() {
 		modifyStandOnArea();
@@ -29,7 +29,7 @@ public class HeroStatus : MonoBehaviour {
 
 
 
-    //检测所在区域
+
     void modifyStandOnArea() {
         float posX = this.gameObject.transform.position.x;
         float posZ = this.gameObject.transform.position.z;

@@ -86,6 +86,9 @@ GameObject:
   - component: {fileID: 4569194130053648}
   - component: {fileID: 54178124692046722}
   - component: {fileID: 114460499267922744}
+  - component: {fileID: 114598881114640698}
+  - component: {fileID: 114074059956201716}
+  - component: {fileID: 114024822327628190}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -525,7 +528,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1145044986486434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 1, z: 12.2}
+  m_LocalPosition: {x: 15, y: 3, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4219697057458922}
@@ -810,6 +813,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29999992, y: 0.099999785, z: 1.3000001}
   m_Center: {x: 0.049999908, y: 1.25, z: 0.050000012}
+--- !u!114 &114024822327628190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1145044986486434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1050975500, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114074059956201716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1145044986486434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114460499267922744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -823,6 +858,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standOnArea: -1
   player: {fileID: 1145044986486434}
+--- !u!114 &114598881114640698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1145044986486434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 70
+    i1: 188
+    i2: 159
+    i3: 82
+    i4: 111
+    i5: 39
+    i6: 14
+    i7: 132
+    i8: 75
+    i9: 245
+    i10: 219
+    i11: 56
+    i12: 47
+    i13: 103
+    i14: 72
+    i15: 105
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!146 &146015596327348320
 WheelCollider:
   m_ObjectHideFlags: 1

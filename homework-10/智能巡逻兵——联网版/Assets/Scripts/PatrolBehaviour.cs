@@ -14,7 +14,7 @@ public class PatrolBehaviour : MonoBehaviour {
     public int ownIndex;
     public bool isCatching;    //是否感知到hero
 
-    private float CATCH_RADIUS = 3.0f;
+    private float CATCH_RADIUS = 1.0f;
 
     void Start () {
         addAction = SceneController.getInstance() as IAddAction;
@@ -53,14 +53,6 @@ public class PatrolBehaviour : MonoBehaviour {
     }
 
     void OnCollisionStay(Collision e) {
-        //撞击围栏，选择下一个点移动
-        if (e.gameObject.name.Contains("Patrol") || e.gameObject.name.Contains("fence")
-            || e.gameObject.tag.Contains("FenceAround")) {
-            isCatching = false;
-            addAction.addRandomMovement(this.gameObject, false);
-        }
-
-        //撞击hero，游戏结束
         if (e.gameObject.name.Contains("Hero")) {
             gameStatusOp.patrolHitHeroAndGameover();
             Debug.Log("Game Over!");

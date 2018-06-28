@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 4120295795801736}
   - component: {fileID: 54785113186833878}
   - component: {fileID: 114300167976117994}
+  - component: {fileID: 114784769574031198}
   m_Layer: 0
   m_Name: Patrol
   m_TagString: Untagged
@@ -240,8 +241,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 148a67e275116654292d499b5fed2d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownIndex: 0
+  ownIndex: 1
   isCatching: 0
+--- !u!114 &114784769574031198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959644049406380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 11
+    i1: 106
+    i2: 123
+    i3: 179
+    i4: 241
+    i5: 139
+    i6: 6
+    i7: 116
+    i8: 56
+    i9: 247
+    i10: 219
+    i11: 82
+    i12: 203
+    i13: 178
+    i14: 25
+    i15: 217
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!136 &136607063954643960
 CapsuleCollider:
   m_ObjectHideFlags: 1
