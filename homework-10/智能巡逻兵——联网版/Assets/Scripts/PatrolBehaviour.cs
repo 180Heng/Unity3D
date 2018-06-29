@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Com.Patrols;
+using UnityEngine.Networking;
 
-//----------------------------------
-// 此脚本加在巡逻兵上
-//----------------------------------
-
-public class PatrolBehaviour : MonoBehaviour {
+public class PatrolBehaviour : NetworkBehaviour
+{
     private IAddAction addAction;
     private IGameStatusOp gameStatusOp;
 
@@ -19,13 +17,12 @@ public class PatrolBehaviour : MonoBehaviour {
     void Start () {
         addAction = SceneController.getInstance() as IAddAction;
         gameStatusOp = SceneController.getInstance() as IGameStatusOp;
-
         ownIndex = getOwnIndex();
         isCatching = false;
     }
 	
 	void Update () {
-        checkNearByHero();
+        CmdcheckNearByHero();
 	}
 
     int getOwnIndex() {
@@ -35,9 +32,8 @@ public class PatrolBehaviour : MonoBehaviour {
         return result;
     }
 
-    //检测进入自己区域的hero
-    void checkNearByHero () {
-        if (gameStatusOp.getHeroStandOnArea() == ownIndex) {    //只有当走进自己的区域
+    void CmdcheckNearByHero() {
+        if (gameStatusOp.getHeroStandOnArea() == ownIndex) {   
             if (!isCatching) {
                 isCatching = true;
                 addAction.addDirectMovement(this.gameObject);
@@ -51,7 +47,7 @@ public class PatrolBehaviour : MonoBehaviour {
             }
         }
     }
-
+    
     void OnCollisionStay(Collision e) {
         if (e.gameObject.name.Contains("Hero")) {
             gameStatusOp.patrolHitHeroAndGameover();

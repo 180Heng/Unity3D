@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 54785113186833878}
   - component: {fileID: 114300167976117994}
   - component: {fileID: 114784769574031198}
+  - component: {fileID: 114104945003080812}
   m_Layer: 0
   m_Name: Patrol
   m_TagString: Untagged
@@ -230,6 +231,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.79999995, y: 1, z: 0.20000029}
   m_Center: {x: -0.0000000357628, y: -0.000000020861632, z: -0.10000014}
+--- !u!114 &114104945003080812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959644049406380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.05
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114300167976117994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,7 +296,7 @@ MonoBehaviour:
     i14: 25
     i15: 217
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_LocalPlayerAuthority: 0
 --- !u!136 &136607063954643960
 CapsuleCollider:
   m_ObjectHideFlags: 1

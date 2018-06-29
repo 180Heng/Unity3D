@@ -34,7 +34,7 @@ public class GameModel : SSActionManager, ISSActionCallback {
 
     //生产英雄
     void genHero() {
-        myHero = Instantiate(HeroItem);
+        
     }
 
     //生产巡逻兵
@@ -126,7 +126,6 @@ public class GameModel : SSActionManager, ISSActionCallback {
                 randomDir = Random.Range(-1, 3);
             }
         }
-        //Debug.Log(isActive + " isActive " + "PatrolLastDir " + PatrolLastDir[index] + " -- randomDir " + randomDir);
         return randomDir;
     }
     //判定巡逻兵走出了自己的区域

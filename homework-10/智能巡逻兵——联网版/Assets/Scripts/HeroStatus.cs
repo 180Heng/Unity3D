@@ -2,20 +2,68 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Com.Patrols;
+using UnityEngine.Networking;
 
-
-public class HeroStatus : MonoBehaviour {
+public class HeroStatus : NetworkBehaviour
+{
+    private int State;//角色状态
+    private int oldState = 0;//前一次角色的状态
+    private int UP = 0;//角色状态向前
+    private int RIGHT = 1;//角色状态向右
+    private int DOWN = 2;//角色状态向后
+    private int LEFT = 3;//角色状态向左
     public int standOnArea = -1;
-    public GameObject player;
     public delegate void GameOverAction();
 	void Start () {
 		
 	}
-	
-	void Update () {
-        Camera.main.transform.position = new Vector3(player.transform.position.x/4, 13.0f, player.transform.position.z/3);
+    void Update () {
+        if (!isLocalPlayer)
+            return;
+        Camera.main.transform.position = new Vector3(this.gameObject.transform.position.x/4, 13.0f, this.gameObject.transform.position.z/3);
+        if (Input.GetKey("w"))
+        {
+            setState(UP);
+        }
+        else if (Input.GetKey("s"))
+        {
+            setState(DOWN);
+        }
+
+        if (Input.GetKey("a"))
+        {
+            setState(LEFT);
+        }
+        else if (Input.GetKey("d"))
+        {
+            setState(RIGHT);
+        }
     }
-	private void OnGUI() {
+    void setState(int currState)
+    {
+        Vector3 transformValue = new Vector3();//定义平移向量
+        int rotateValue = (currState - State) * 90;
+        switch (currState)
+        {
+            case 0:
+                transformValue = Vector3.forward * Time.deltaTime * 10;
+                break;
+            case 1:
+                transformValue = Vector3.right * Time.deltaTime * 10;
+                break;
+            case 2:
+                transformValue = Vector3.back * Time.deltaTime * 10;
+                break;
+            case 3://角色状态向左时，角色不断向左缓慢移动
+                transformValue = Vector3.left * Time.deltaTime * 10;
+                break;
+        }
+        transform.Rotate(Vector3.up, rotateValue);//旋转角色
+        transform.Translate(transformValue, Space.World);//平移角色
+        oldState = State;//赋值，方便下一次计算
+        State = currState;//赋值，方便下一次计算
+    }
+    private void OnGUI() {
 		modifyStandOnArea();
 		float posY = this.gameObject.transform.position.y;
 		if (posY <= -3.0) {

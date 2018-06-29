@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 
-//并发顺序
-public class SSActionManager : MonoBehaviour {
+public class SSActionManager : NetworkBehaviour
+{
 
     private Dictionary<int, SSAction> actions = new Dictionary<int, SSAction>();
     private List<SSAction> waitingAdd = new List<SSAction>();

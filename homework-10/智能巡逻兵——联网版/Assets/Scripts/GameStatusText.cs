@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-//----------------------------------
-// 此脚本加在text上
-//----------------------------------
 
-public class GameStatusText : MonoBehaviour {
-    private int score = 0;
+
+public class GameStatusText : NetworkBehaviour
+{
+
+    public int score = 0;
     public int textType;  //0为score，1为gameover
 
 	void Start () {
@@ -44,7 +45,7 @@ public class GameStatusText : MonoBehaviour {
     } 
 
     void gameOver() {
-		if (textType == 1 )
-            this.gameObject.GetComponent<Text>().text = "Game Over!";
+        if (textType == 1 )
+            this.gameObject.GetComponent<Text>().text = "You lose";
     }
 }

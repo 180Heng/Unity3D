@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Com.Patrols;
+using UnityEngine.Networking;
 
-public class UserInterface : MonoBehaviour {
+public class UserInterface : NetworkBehaviour {
     private IUserAction action;
 
     void Start () {
@@ -11,20 +12,21 @@ public class UserInterface : MonoBehaviour {
     }
 	
 	void Update () {
-        detectKeyInput();
-    }
 
-    void detectKeyInput() {
-        if (Input.GetKey(KeyCode.UpArrow)) {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
             action.heroMove(Diretion.UP);
         }
-        if (Input.GetKey(KeyCode.DownArrow)) {
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
             action.heroMove(Diretion.DOWN);
         }
-        if (Input.GetKey(KeyCode.LeftArrow)) {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
             action.heroMove(Diretion.LEFT);
         }
-        if (Input.GetKey(KeyCode.RightArrow)) {
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
             action.heroMove(Diretion.RIGHT);
         }
     }
